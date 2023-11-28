@@ -124,8 +124,7 @@ public class BingoTeste {
             System.out.println("Digite os 5 números do sorteio separados por vírgulas sem espaços. Exemplo:1,2,3,4,5");
             String usuarioSorteio = scanner.next();
 
-            //Atenção
-
+            
             String[] numerosSorteio = usuarioSorteio.split(","); //divide as cartelas em partes
 
             for (int i = 0; i < 5; i++) {
@@ -140,13 +139,7 @@ public class BingoTeste {
             }
             System.out.println("Sorteados da rodada" + Arrays.toString(sorteadosRodada));
             System.out.println("Todos os numeros sorteados" + Arrays.toString(todosSorteados));
-
-//            System.out.println(" Caso voce queira  continuar o sorteio digite : C ");
-//            System.out.println(" Caso voce queira parar digite : X  ");
-//            String chooseOption = scanner.next();
-//            if (chooseOption.equals("X")) {
-//                continuar = false;
-//            }
+        
             int [] pontuacao= conferencia(cards, todosSorteados);//int pontuaçao
             vencedor =  eBingo(pontuacao);
             if (vencedor >-1){
@@ -227,8 +220,7 @@ public class BingoTeste {
                 soma += guardaConferencia[i] [j];
             }
             pontuacao [i] = soma;
-        }
-        //System.out.println(cards.length);
+        }        
         System.out.println(Arrays.deepToString(cards));
         System.out.println(Arrays.deepToString(guardaConferencia));
         System.out.println(Arrays.toString(todosSorteados));
